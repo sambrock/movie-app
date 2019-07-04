@@ -10,5 +10,6 @@ class AppController extends Controller
     {
         $testVar = "Hello world";
         return view('welcome')->with('testVar', $testVar);
+
     }
 }
