@@ -11,7 +11,11 @@
 |
 */
 
-//Route::get('/', function () {
-//    return view('filmist/index');
-//});
 Route::get('/', 'AppController@test');
+Route::get('search/{searchTerm}', 'AppController@search');
+Route::post('log', 'AppController@log');
+Route::get('seen', 'AppController@seen');
+
+Auth::routes();
+
+Route::get('/home', 'HomeController@index')->name('home');
