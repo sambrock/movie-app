@@ -1,8 +1,36 @@
+@import url("//use.fontawesome.com/releases/v5.6.1/css/all.css'");
+
 body{
-    background: #090909;
-    margin: 0 auto;
+    background: #000;
+    max-width: 100%;
+    margin: 0 24px;
     color: #fff;
+    font-family: 'Open Sans', sans-serif;
 }
 #logo{
-    margin: 20px;
+    margin: 24px 0;
+}
+.poster-list{
+    display: grid;
+    grid-template-columns: repeat( auto-fit, minmax(10%, 1fr) );
+    grid-gap: 12px;
+}
+.poster-container{
+    display: inline-block;
+}
+.poster-img-container{
+    width: 100%;
+/*    overflow: hidden;*/
+    border-radius: 2px;
+}
+.poster-img{
+/*    height: 100%;*/
+    width: 100%;
+    margin: 0 auto;
+    cursor: pointer;
+}
+#watched-icon::before {
+    content: '\f017';
+    /* font-weight: 400;  If using Brands or Regular */
+    font-weight: 900;
 }
