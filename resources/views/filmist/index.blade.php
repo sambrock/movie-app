@@ -14,11 +14,13 @@
         <div class="poster-img-container">
             <img src="https://image.tmdb.org/t/p/w500{{$movie['poster_path']}}" class="poster-img">
         </div>
+
     </div>
     @endforeach
 
 </div>
 
+<!--
 <form action="{{url('log')}}" method="POST">
     {{ csrf_field() }}
     <label for="name">Name:</label>
@@ -31,5 +33,6 @@
 <div class="ac-results">
 
 </div>
+-->
 
 @endsection
