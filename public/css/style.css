@@ -1,36 +1,131 @@
-@import url("//use.fontawesome.com/releases/v5.6.1/css/all.css'");
+@import url('https://fonts.googleapis.com/css?family=Roboto&display=swap');
+@import url(//db.onlinewebfonts.com/c/35387d671df7e64f6fb91f793cf63650?family=FF+Super+Grotesk);
+@import url(//db.onlinewebfonts.com/c/23eb834a2ed4ff3350dbe00eff43348e?family=CapitaW01-Medium);
 
 body{
-    background: #000;
+    background: #131414;
     max-width: 100%;
     margin: 0 24px;
     color: #fff;
-    font-family: 'Open Sans', sans-serif;
+    font-family: 'FF Super Grotesk', sans-serif;
+}
+header, .head{
+    display: flex;
+    justify-content: space-between;
 }
 #logo{
     margin: 24px 0;
 }
+.nav-icons{
+    color: #ebebeb;
+    font-size: 1.9em;
+    margin: 32px 0 0 0;
+    font-weight: 600;
+    /*
+    padding: 10px 20px;
+    line-height: 10px;
+    text-decoration: none;
+
+    border: 1px #fff solid;
+    background: #fff;
+    font-size: 1em;
+    font-weight: 700;
+    border-radius: 2px;
+    */
+}
+/*
+#log-btn i{
+margin: 0 10px 0 0;
+}
+*/
 .poster-list{
     display: grid;
-    grid-template-columns: repeat( auto-fit, minmax(10%, 1fr) );
-    grid-gap: 12px;
+    grid-template-columns: repeat( auto-fit, minmax(9%, 1fr) );
+    grid-gap: 24px;
 }
 .poster-container{
     display: inline-block;
+    transition: transform ease 0.5s;
 }
+/*
+.poster-container:hover{
+    -webkit-transform: translateX(20px);
+    -moz-transform: translateX(20px);
+    -ms-transform: translateX(20px);
+    -o-transform: translateX(20px);
+    transform: translateY(-5px);
+}
+*/
 .poster-img-container{
     width: 100%;
-/*    overflow: hidden;*/
-    border-radius: 2px;
+    /*    overflow: hidden;*/
 }
 .poster-img{
-/*    height: 100%;*/
+    /*    height: 100%;*/
     width: 100%;
     margin: 0 auto;
     cursor: pointer;
+    border-radius: 5px;
+}
+.poster-title{
+
 }
 #watched-icon::before {
     content: '\f017';
     /* font-weight: 400;  If using Brands or Regular */
     font-weight: 900;
+}
+#nav{
+    display: none;
+}
+.content{
+    display: flex;
+    flex-flow: row wrap;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 50%;
+    background: #fff;
+}
+.menu-bg{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background: rgba(0,0,0,0.5);
+}
+.head{
+    padding: 0 41px 0 24px;
+    width: 100%;
+}
+.head .nav-icons{
+    color: #090909;
+}
+.links{
+    width: 33.33%;
+}
+.links ul li{
+    margin: 0 0 20px 0;
+}
+.links ul li a{
+    color: #090909;
+    text-decoration: none;
+    font-size: 1.9em;
+    text-transform: uppercase;
+    padding: 0px 20px 0px 80px;
+    font-weight: 500;
+    transition: opacity .25s linear;
+}
+.links ul li a:hover{
+    opacity: .5;
+}
+.popular-films{
+    width: 66.66%;
+}
+.poster-container-head{
+    display: grid;
+    grid-template-columns: repeat( auto-fit, minmax(10%, 1fr) );
+    grid-gap: 24px;
 }
