@@ -49,4 +49,10 @@ class AppController extends Controller
 
         return view('filmist/seen', ['results' => $results]);
     }
+    public function getPopular()
+    {
+        $movies = Tmdb::getMoviesApi()->getPopular();
+        $results = $movies["results"];
+        return response()->json(['results' => $results]);
+    }
 }
