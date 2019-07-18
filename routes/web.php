@@ -15,7 +15,7 @@ Route::get('/', 'AppController@test');
 Route::get('search/{searchTerm}', 'AppController@search');
 Route::post('log', 'AppController@log');
 Route::get('seen', 'AppController@seen');
-Route::get('popular', 'AppController@getPopular');
+Route::get('movie/{movieId}', 'AppController@movie');
 
 Auth::routes();
 
