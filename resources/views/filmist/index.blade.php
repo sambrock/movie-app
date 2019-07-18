@@ -4,23 +4,24 @@
 
 @section('content')
 
-<div class="sub-nav-wrapper">
-
+<div class="sub-nav">
+    <span>Decade</span><span>Genre</span><span>Sort by</span>
 </div>
 
-<div class="poster-list watched">
+<div class="poster-list">
     @foreach($results as $movie)
     <div class="poster-container">
-        <div class="poster-img-container">
-            <img src="https://image.tmdb.org/t/p/w500{{$movie['poster_path']}}" class="poster-img">
-        </div>
+        <a href="{{url('movie')}}/{{$movie['id']}}" class="frame">
+            <div class="poster-img-container">
+                <img src="https://image.tmdb.org/t/p/w342{{$movie['poster_path']}}" class="poster-img">
+            </div>
+        </a>
 
     </div>
     @endforeach
 
 </div>
 
-<!--
 <form action="{{url('log')}}" method="POST">
     {{ csrf_field() }}
     <label for="name">Name:</label>
@@ -33,6 +34,5 @@
 <div class="ac-results">
 
 </div>
--->
 
 @endsection
