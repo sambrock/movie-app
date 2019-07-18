@@ -12,7 +12,7 @@ class AppController extends Controller
 {
     public function test()
     {
-        $movies = Tmdb::getMoviesApi()->getRecommendations(18);
+        $movies = Tmdb::getMoviesApi()->getRecommendations(3175);
         $results = $movies["results"];
         return view('filmist/index', ['results' => $results]);
     }
@@ -49,10 +49,9 @@ class AppController extends Controller
 
         return view('filmist/seen', ['results' => $results]);
     }
-    public function getPopular()
+    public function movie($movieId)
     {
-        $movies = Tmdb::getMoviesApi()->getPopular();
-        $results = $movies["results"];
-        return response()->json(['results' => $results]);
+        $movie = Tmdb::getMoviesApi()->getMovie($movieId);
+        return view('filmist/movie', ['movie' => $movie]);
     }
 }
